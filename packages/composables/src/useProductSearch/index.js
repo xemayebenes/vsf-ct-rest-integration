@@ -1,18 +1,21 @@
-import { generateContext, vsfRef } from '@vue-storefront/core';
-import { ssrRef, ref, computed } from '@nuxtjs/composition-api';
+import { useVSFContext } from '@vue-storefront/core';
+import { ssrRef, computed } from '@nuxtjs/composition-api';
 
 const useProductSearch = () => {
-  const context = generateContext();
-
+  const context = useVSFContext();
+  console.log('llega a useProductSearch invocation');
   const response = ssrRef({});
   const loading = ssrRef(false);
   const error = ssrRef(undefined);
 
-  const search = async (id) => {
+  const search = async () => {
+    console.log('llega a useProductSearch search');
     try {
+      console.log(context.$ctRest);
       loading.value = true;
-      response.value = await context.$ctRest.searchProducts({});
+      response.value = await context.$ctRest.api.searchProducts({});
     } catch (err) {
+      console.log('error', err);
       error.value = err;
     } finally {
       loading.value = false;

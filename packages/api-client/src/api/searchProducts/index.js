@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 const searchProducts = async (context, params) => {
-  console.log(searchProducts);
+  console.log('llega a api-client');
   const response = await context.client.execute({
     uri: context.client
       .getRequestBuilder()
