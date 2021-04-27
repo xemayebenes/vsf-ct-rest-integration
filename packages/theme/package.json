@@ -1,7 +1,7 @@
 {
   "name": "@vsf-devgurus/vsf-ct-rest-integration-theme",
   "version": "0.0.5",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build -m",
