@@ -32,5 +32,8 @@
     "jest": "^24.1.0",
     "vue-jest": "^4.0.0-0"
   },
-  "gitHead": "4a253ec83f763035de4c57af3b8223ec0c4eee49"
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "c847e382261fd9b32c9214d851eec216c60bd98c"
 }
