@@ -35,7 +35,7 @@ export default {
         href:
           'https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,600,700|Roboto:300,300i,400,400i,500,700&display=swap',
         media: 'print',
-        onload: 'this.media=\'all\'',
+        onload: "this.media='all'",
         once: true
       }
     ]
@@ -53,8 +53,14 @@ export default {
         coreDevelopment: true,
         // @core-development-only-end
         useRawSource: {
-          dev: ['@vue-storefront/ctRest', '@vue-storefront/core'],
-          prod: ['@vue-storefront/ctRest', '@vue-storefront/core']
+          dev: [
+            '@vsf-devgurus/vsf-ct-rest-integration',
+            '@vue-storefront/core'
+          ],
+          prod: [
+            '@vsf-devgurus/vsf-ct-rest-integration',
+            '@vue-storefront/core'
+          ]
         }
       }
     ],
@@ -64,8 +70,8 @@ export default {
       {
         generate: {
           replace: {
-            apiClient: '@vue-storefront/ctRest-api',
-            composables: '@vue-storefront/ctRest'
+            apiClient: '@vsf-devgurus/vsf-ct-rest-integration-api',
+            composables: '@vsf-devgurus/vsf-ct-rest-integration'
           }
         }
       }
@@ -74,7 +80,7 @@ export default {
     /* project-only-start
     ['@vue-storefront/nuxt-theme'],
     project-only-end */
-    ['@vue-storefront/ctRest/nuxt', {}]
+    ['@vsf-devgurus/vsf-ct-rest-integration/nuxt', {}]
   ],
   modules: [
     'nuxt-i18n',

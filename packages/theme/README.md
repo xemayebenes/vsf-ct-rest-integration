@@ -1,6 +1,6 @@
 # theme
 
-> ctRest theme
+> vsf-ct-rest-integration theme
 
 ## Build Setup
 

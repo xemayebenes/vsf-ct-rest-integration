@@ -1,5 +1,5 @@
 import { CategoryGetters, AgnosticCategoryTree } from '@vue-storefront/core';
-import { Category } from '@vue-storefront/ctRest-api/src/types';
+import { Category } from '@vsf-devgurus/vsf-ct-rest-integration-api/src/types';
 
 const itemToTree = (category: Category): AgnosticCategoryTree => {
   return {

@@ -1,7 +1,7 @@
 module.exports = {
   integrations: {
     ctRest: {
-      location: '@vue-storefront/ctRest-api/server',
+      location: '@vsf-devgurus/vsf-ct-rest-integration-api/server',
       configuration: {}
     }
   }

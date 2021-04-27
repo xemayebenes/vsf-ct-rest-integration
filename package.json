@@ -1,5 +1,5 @@
 {
-  "name": "ctRest",
+  "name": "vsf-ct-rest-integration",
   "private": true,
   "license": "MIT",
   "engines": {

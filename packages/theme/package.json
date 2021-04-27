@@ -1,5 +1,5 @@
 {
-  "name": "@vue-storefront/ctRest-theme",
+  "name": "@vsf-devgurus/vsf-ct-rest-integration-theme",
   "version": "2.3.0-rc.3",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@storefront-ui/vue": "^0.10.3",
-    "@vue-storefront/ctRest": "^2.3.0-rc.3",
+    "@vsf-devgurus/vsf-ct-rest-integration": "^2.3.0-rc.3",
     "@vue-storefront/middleware": "^2.3.0-rc.3",
     "@vue-storefront/nuxt": "^2.3.0-rc.3",
     "@vue-storefront/nuxt-theme": "^2.3.0-rc.3",

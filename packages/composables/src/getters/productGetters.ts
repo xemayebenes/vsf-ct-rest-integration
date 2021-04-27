@@ -4,7 +4,7 @@ import {
   AgnosticPrice,
   ProductGetters
 } from '@vue-storefront/core';
-import { ProductVariant } from '@vue-storefront/ctRest-api/src/types';
+import { ProductVariant } from '@vsf-devgurus/vsf-ct-rest-integration-api/src/types';
 
 type ProductVariantFilters = any;
 
@@ -13,7 +13,7 @@ type ProductVariantFilters = any;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const getProductName = (product: ProductVariant): string =>
-  product?.name || 'Product\'s name';
+  product?.name || "Product's name";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const getProductSlug = (product: ProductVariant): string => product.sku;

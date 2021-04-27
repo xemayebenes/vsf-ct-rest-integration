@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { useProductSearch } from '@vue-storefront/ctRest';
+import { useProductSearch } from '@vsf-devgurus/vsf-ct-rest-integration';
 console.log('aqui', useProductSearch);
 import { onSSR } from '@vue-storefront/core';
 
@@ -25,9 +25,9 @@ export default {
     return {
       loading,
       error,
-      products
+      products,
     };
-  }
+  },
 };
 </script>
 

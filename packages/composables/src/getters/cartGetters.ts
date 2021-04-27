@@ -5,7 +5,10 @@ import {
   AgnosticCoupon,
   AgnosticDiscount
 } from '@vue-storefront/core';
-import { Cart, LineItem } from '@vue-storefront/ctRest-api/src/types';
+import {
+  Cart,
+  LineItem
+} from '@vsf-devgurus/vsf-ct-rest-integration-api/src/types';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const getCartItems = (cart: Cart): LineItem[] => [
@@ -28,7 +31,7 @@ export const getCartItems = (cart: Cart): LineItem[] => [
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const getCartItemName = (product: any): string =>
-  product?.name || 'Product\'s name';
+  product?.name || "Product's name";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const getCartItemImage = (product: any): string =>

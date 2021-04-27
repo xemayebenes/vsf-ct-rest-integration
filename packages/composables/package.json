@@ -1,5 +1,5 @@
 {
-  "name": "@vue-storefront/ctRest",
+  "name": "@vsf-devgurus/vsf-ct-rest-integration",
   "version": "2.3.0-rc.3",
   "private": true,
   "sideEffects": false,
@@ -13,7 +13,7 @@
     "prepublish": "yarn build"
   },
   "dependencies": {
-    "@vue-storefront/ctRest-api": "^2.3.0-rc.3",
+    "@vsf-devgurus/vsf-ct-rest-integration-api": "^2.3.0-rc.3",
     "@vue-storefront/core": "^2.3.0-rc.3"
   },
   "peerDependencies": {
