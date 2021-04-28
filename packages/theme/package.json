@@ -1,6 +1,6 @@
 {
   "name": "@vsf-devgurus/vsf-ct-rest-integration-theme",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "private": false,
   "scripts": {
     "dev": "nuxt",
@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
     "@storefront-ui/vue": "^0.10.3",
-    "@vsf-devgurus/vsf-ct-rest-integration": "^0.0.15",
+    "@vsf-devgurus/vsf-ct-rest-integration": "^0.0.16",
     "@vue-storefront/middleware": "^2.3.0-rc.3",
     "@vue-storefront/nuxt": "^2.3.0-rc.3",
     "@vue-storefront/nuxt-theme": "^2.3.0-rc.3",

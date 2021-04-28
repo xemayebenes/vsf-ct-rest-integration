@@ -1,6 +1,6 @@
 {
   "name": "@vsf-devgurus/vsf-ct-rest-integration",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "private": false,
   "sideEffects": false,
   "main": "lib/index.cjs.js",
@@ -13,7 +13,7 @@
     "prepublish": "yarn build"
   },
   "dependencies": {
-    "@vsf-devgurus/vsf-ct-rest-integration-api": "^0.0.13",
+    "@vsf-devgurus/vsf-ct-rest-integration-api": "^0.0.16",
     "@vue-storefront/core": "^2.3.0-rc.3"
   },
   "peerDependencies": {
