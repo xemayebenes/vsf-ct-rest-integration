@@ -15,22 +15,30 @@ const { createRequestBuilder } = require('@commercetools/api-request-builder');
 
 const fetch = require('node-fetch');
 
-const defaultSettings = {};
-
 const onCreate = (settings) => {
+  // const defaultApi = {
+  //   uri: 'https://auth.us-central1.gcp.commercetools.com',
+  //   authHost: 'https://api.us-central1.gcp.commercetools.com',
+  //   projectKey: 'vsf-test',
+  //   clientId: '1fSSHos3RtVEq_1u6MxluPHU',
+  //   clientSecret: '46BDvgKQEizlrDfsAxp0gNW2W2aA2PDP',
+  //   scopes: ['manage_project:vsf-test']
+  // };
+  const { api } = settings;
   const config = {
     commercetools: {
       auth: {
-        host: 'https://auth.us-central1.gcp.commercetools.com',
-        projectKey: 'vsf-test',
+        host: api.uri,
+        projectKey: api.projectKey,
         credentials: {
-          clientId: '1fSSHos3RtVEq_1u6MxluPHU',
-          clientSecret: '46BDvgKQEizlrDfsAxp0gNW2W2aA2PDP'
+          clientId: api.clientId,
+          clientSecret: api.clientSecret
         },
+        scopes: api.scopes,
         fetch
       },
       middleware: {
-        host: 'https://api.us-central1.gcp.commercetools.com',
+        host: api.authHost,
         fetch
       }
     },
