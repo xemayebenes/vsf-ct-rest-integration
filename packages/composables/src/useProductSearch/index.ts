@@ -12,6 +12,7 @@ const useProductSearch = (): any => {
       loading.value = true;
       response.value = await context.$ctRest.api.searchProducts({});
     } catch (err) {
+      console.log(err);
       error.value = err;
     } finally {
       loading.value = false;

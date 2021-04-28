@@ -18,18 +18,19 @@ const defaultSettings = {};
 
 const onCreate = (settings) => {
   // const defaultApi = {
-  //   uri: 'https://auth.us-central1.gcp.commercetools.com',
-  //   authHost: 'https://api.us-central1.gcp.commercetools.com',
+  //   authHost: 'https://auth.us-central1.gcp.commercetools.com',
+  //   uri: 'https://api.us-central1.gcp.commercetools.com',
   //   projectKey: 'vsf-test',
   //   clientId: '1fSSHos3RtVEq_1u6MxluPHU',
   //   clientSecret: '46BDvgKQEizlrDfsAxp0gNW2W2aA2PDP',
   //   scopes: ['manage_project:vsf-test']
   // };
   const { api } = settings;
+  console.log('settings', settings);
   const config = {
     commercetools: {
       auth: {
-        host: api.uri,
+        host: api.authHost,
         projectKey: api.projectKey,
         credentials: {
           clientId: api.clientId,
@@ -39,7 +40,7 @@ const onCreate = (settings) => {
         fetch
       },
       middleware: {
-        host: api.authHost,
+        host: api.uri,
         fetch
       }
     },
@@ -50,7 +51,9 @@ const onCreate = (settings) => {
 
   const middlewares = [
     createAuthMiddlewareForClientCredentialsFlow(auth),
-    createQueueMiddleware({ concurrency: concurrency || 10 }),
+    createQueueMiddleware({
+      concurrency: concurrency || 10
+    }),
     createHttpMiddleware(middleware)
   ];
 
