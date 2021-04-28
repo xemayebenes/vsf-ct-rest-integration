@@ -24,9 +24,6 @@
     "@vue-storefront/core": "^2.3.0-rc.3",
     "node-fetch": "^2.6.1"
   },
-  "files": [
-    "lib/**/*"
-  ],
   "publishConfig": {
     "access": "public"
   },
