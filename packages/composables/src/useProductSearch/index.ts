@@ -1,10 +1,10 @@
 import { useVSFContext } from '@vue-storefront/core';
 import { ssrRef, computed } from '@nuxtjs/composition-api';
 
-const useProductSearch = () => {
+const useProductSearch = (): any => {
   const context = useVSFContext();
   console.log('llega a useProductSearch invocation');
-  const response = ssrRef({});
+  const response: any = ssrRef({});
   const loading = ssrRef(false);
   const error = ssrRef(undefined);
 
