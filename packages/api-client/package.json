@@ -1,6 +1,6 @@
 {
   "name": "@vsf-devgurus/vsf-ct-rest-integration-api",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "private": false,
   "sideEffects": false,
   "server": "server/index.js",
