@@ -11,7 +11,8 @@ const useProductSearch = (): any => {
   const search = async () => {
     console.log('llega a useProductSearch search');
     try {
-      console.log(context.$ctRest);
+      console.log("aqui");
+      console.log(context);
       loading.value = true;
       response.value = await context.$ctRest.api.searchProducts({});
     } catch (err) {
