@@ -35,7 +35,7 @@ export default {
         href:
           'https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,600,700|Roboto:300,300i,400,400i,500,700&display=swap',
         media: 'print',
-        onload: "this.media='all'",
+        onload: 'this.media=\'all\'',
         once: true
       }
     ]
@@ -65,17 +65,17 @@ export default {
       }
     ],
     // @core-development-only-start
-    [
-      '@vue-storefront/nuxt-theme',
-      {
-        generate: {
-          replace: {
-            apiClient: '@vsf-devgurus/vsf-ct-rest-integration-api',
-            composables: '@vsf-devgurus/vsf-ct-rest-integration'
-          }
-        }
-      }
-    ],
+    // [
+    //   '@vue-storefront/nuxt-theme',
+    //   {
+    //     generate: {
+    //       replace: {
+    //         apiClient: '@vsf-devgurus/vsf-ct-rest-integration-api',
+    //         composables: '@vsf-devgurus/vsf-ct-rest-integration'
+    //       }
+    //     }
+    //   }
+    // ],
     // @core-development-only-end
     /* project-only-start
     ['@vue-storefront/nuxt-theme'],
