@@ -11,11 +11,12 @@ const onCreate = (settings) => {
   const defaultApi = {
     authHost: 'https://auth.us-central1.gcp.commercetools.com',
     uri: 'https://api.us-central1.gcp.commercetools.com',
-    projectKey: 'vsf-test',
-    clientId: '1fSSHos3RtVEq_1u6MxluPHU',
-    clientSecret: '46BDvgKQEizlrDfsAxp0gNW2W2aA2PDP',
-    scopes: ['manage_project:vsf-test']
+    projectKey: '<project-key>',
+    clientId: '<client-id>',
+    clientSecret: '<client-secret>',
+    scopes: []
   };
+
   const { api = defaultApi } = settings;
 
   const config = {
