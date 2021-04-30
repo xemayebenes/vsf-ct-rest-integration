@@ -1,39 +1,70 @@
-![Vue Storefront](https://camo.githubusercontent.com/48c886ac0703e3a46bc0ec963e20f126337229fc/68747470733a2f2f643968687267346d6e767a6f772e636c6f756466726f6e742e6e65742f7777772e76756573746f726566726f6e742e696f2f32383062313964302d6c6f676f2d76735f3062793032633062793032633030303030302e6a7067)
-
-# ctRest for Vue Storefront Next
-
-<a href="https://discord.vuestorefront.io">![Our Discord server](https://img.shields.io/discord/770285988244750366?label=join%20discord&logo=Discord&logoColor=white)</a>
+# Vue StoreFront commercetools rest integration
 
 > **Disclaimer:** This project is still in beta phase.
 
-This repository is a starting point for creating new integrations for [Vue Storefront Next](https://github.com/vuestorefront/vue-storefront/).
+This repository is a vue storefront commercetools integration for the [REST API](https://docs.commercetools.com/api/)
 
-- [Documentation](https://docs.vuestorefront.io/v2/integrate/integration-guide.html) (WIP)
+The main goal of the repository is to extend the offical [commercetools integration](https://docs.vuestorefront.io/v2/commercetools/) with REST capabilities that are not possible with the GraphQL API.
+
+These capabilities are:
+
+- [**PRODUCT PROJECTION SEARCH**](https://docs.commercetools.com/api/projects/products-search)
 
 This repository is a monorepo containing three projects:
 
-- **api-client** - communicates with a backend;
-- **composables** - exposes composable functions used to retrieve data using `api-client` and to map them to universal data formats using `getters`;
-- **theme** - `nuxt` project that glues everything together. It extends our core theme and uses `composables` to retrieve data.
+- **api-client** - communicates with commercetools backend;
+- **composables** - exposes composable functions used to retrieve data using `api-client`;
+- **theme** - `nuxt` project that glues everything together. It extends our core theme and uses `composables` to retrieve data. For this particular integration, only sample code for the use of composables is provided.
 
 ## How to start?
 
-1. Change all `@vsf-devgurus/vsf-ct-rest-integration` strings to your integration name (eg `@vue-storefront/super-ecomm`)
-
-2. Install all required dependencies:
+1. Install all required dependencies:
 
 ```sh
 yarn install
 ```
 
-3. (optional) Then you can verify if everything works properly by building all three projects:
+2. (optional) Then you can verify if everything works properly by building all three projects:
 
 ```sh
 yarn build
 ```
 
-4. If everything built properly, you can start creating your new integration with:
+4. If everything built properly, you can run the code with:
 
 ```sh
 yarn dev
 ```
+
+## How to use?
+
+1. Create a vue storefront commercetools integration project. [Documentation](https://docs.vuestorefront.io/v2/commercetools/getting-started.html)
+
+2. Install the dependency
+
+```sh
+yarn add @vsf-devgurus/vsf-ct-rest-integration
+```
+
+3. Configure the integration in the middleware.config.js file
+
+```js
+ctRest: {
+      location: "@vsf-devgurus/vsf-ct-rest-integration-api/server",
+      configuration: {
+        api: {
+          uri: "https://api.us-central1.gcp.commercetools.com",
+          authHost: "https://auth.us-central1.gcp.commercetools.com",
+          projectKey: <project-key>,
+          clientId: <client-id>,
+          clientSecret: <client-secret>,
+          scopes: <client-scopes>
+        }
+      }
+    }
+```
+
+4. Use the composables exposed
+
+- [useProductSearch](./packages/composables/src/useProductSearch)
+  Example [here](./packages/theme/pages/Search.vue)

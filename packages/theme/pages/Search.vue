@@ -88,7 +88,7 @@ export default {
   transition: 'fade',
   name: 'SearchPage',
   methods: {},
-  setup(props, context) {
+  setup() {
     const {
       loading,
       error,
